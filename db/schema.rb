@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150916144259) do
+ActiveRecord::Schema.define(version: 20150916150237) do
+
+  create_table "transactions", force: :cascade do |t|
+    t.string   "fname"
+    t.string   "lname"
+    t.integer  "deposit"
+    t.integer  "withdrawal"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "fname"
